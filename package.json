@@ -1,13 +1,19 @@
 {
-  "name": "frontend",
+  "name": "mgm-frontend",
+  "description": "",
+  "main": "index.js",
   "version": "0.1.0",
-  "private": true,
+  "engines": {
+    "node": "18.12.1",
+    "npm": "8.19.2"
+  },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "webpack serve --progress",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "private": true,
   "eslintConfig": {
     "extends": [
       "react-app",
