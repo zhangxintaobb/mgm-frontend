@@ -1,0 +1,114 @@
+// white
+$white: #ffffff !default; 
+//black
+$black: #000000 !default;
+// gray
+$gray-100: #f7f8fa !default; 
+$gray-200: #f2f3f5 !default; 
+$gray-300: #e6e6e8 !default;
+$gray-400: #d7d7d9 !default; 
+$gray-500: #b1b2b5 !default; 
+$gray-600: #939499 !default; 
+$gray-700: #737478 !default; 
+$gray-800: #3c4043 !default; 
+$gray-900: #070707 !default; 
+// blue
+$blue-50: #f5faff !default; 
+$blue-100: #e2f0ff !default; 
+$blue-200: #d0e8ff !default; 
+$blue-300: #bfe0ff !default; 
+$blue-500: #0071c5 !default; 
+$blue-700: #2768b3 !default; 
+$blue-900: #074380 !default; 
+// red
+$red-100: #fae9e6!default; 
+$red-300: #f7c7bf !default; 
+$red-500: #e85741 !default; 
+$red-700: #af3421 !default; 
+$red-900: #950f0f !default;
+// yellow
+$yellow-100: #faf3d9 !default; 
+$yellow-300: #ffe5aa !default; 
+$yellow-500: #ffb539 !default; 
+$yellow-700: #cb8601 !default; 
+$yellow-900: #9d5f00 !default;
+// green
+$green-100: #E3FCEF !default; 
+$green-300: #5ed69f !default; 
+$green-500: #36b37e !default; 
+$green-700: #00875a !default; 
+$green-900: #006644 !default; 
+// teal
+$teal-100: #e6fcff !default; 
+$teal-300: #79e2f2 !default; 
+$teal-500: #4cbfdb !default; 
+$teal-700: #008fa9 !default; 
+$teal-900: #04758d !default; 
+// purple
+$purple-100: #ede6fa !default;
+$purple-300: #c0b6f2 !default;
+$purple-500: #7f4de3 !default;
+$purple-700: #5021af !default;
+$purple-900: #3c0f95 !default;
+
+$blues:(
+    "blue-50":$blue-50,
+    "blue-100":$blue-100,
+    "blue-200":$blue-200,
+    "blue-300":$blue-300,
+    "blue-500":$blue-500,
+    "blue-700":$blue-700,
+    "blue-900":$blue-900,
+) !default;
+
+$reds:(
+    "red-100":$red-100,
+    "red-300":$red-300,
+    "red-500":$red-500,
+    "red-700":$red-700,
+    "red-900":$red-900,
+) !default;
+
+$purples:(
+    "purple-100":$purple-100,
+    "purple-300":$purple-300,
+    "purple-500":$purple-500,
+    "purple-700":$purple-700,
+    "purple-900":$purple-900,
+) !default;
+
+$yellows:(
+    "yellow-100":$yellow-100,
+    "yellow-300":$yellow-300,
+    "yellow-500":$yellow-500,
+    "yellow-700":$yellow-700,
+    "yellow-900":$yellow-900,
+) !default;
+
+$greens:(
+    "green-100":$green-100,
+    "green-300":$green-300,
+    "green-500":$green-500,
+    "green-700":$green-700,
+    "green-900":$green-900,
+) !default;
+
+$teals:(
+    "teal-100":$teal-100,
+    "teal-300":$teal-300,
+    "teal-500":$teal-500,
+    "teal-700":$teal-700,
+    "teal-900":$teal-900,
+) !default;
+
+$grays:(
+    "gray-100":$gray-100,
+    "gray-200":$gray-200,
+    "gray-300":$gray-300,
+    "gray-400":$gray-400,
+    "gray-500":$gray-500,
+    "gray-600":$gray-600,
+    "gray-700":$gray-700,
+    "gray-800":$gray-800,
+    "gray-900":$gray-900,
+) !default;
