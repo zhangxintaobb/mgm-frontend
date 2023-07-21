@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "module": "ESNext",
+        "strictNullChecks": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "target": "ESNext",
+        "noImplicitAny": true,
+        "moduleResolution": "Node",
+        "sourceMap": true,
+        "outDir": "./dist/",
+        "baseUrl": ".",
+        "jsx": "react",
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "paths": {
+            "@app/*":["app/*"]
+        }
+    },
+    "include": ["app*/**/*","react-app-env.d.ts"],
+    "exclude": ["node_modules"]
+}
