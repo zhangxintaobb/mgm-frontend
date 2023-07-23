@@ -112,3 +112,7 @@ $grays:(
     "gray-800":$gray-800,
     "gray-900":$gray-900,
 ) !default;
+
+@mixin elevation-1 {
+    box-shadow: 0rem 0.0625rem 0.25rem #07070726;
+}

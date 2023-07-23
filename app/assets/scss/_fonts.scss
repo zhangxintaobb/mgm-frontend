@@ -11,3 +11,22 @@ $font-medium: 500;
 $font-bold-light: 600;
 $font-bold-regular: 700;
 $font-bold-medium: 800;
+
+@mixin caption_medium{
+    font-size: $font-12;
+    font-weight: $font-medium;
+    line-height: 1rem;
+}
+
+@mixin caption_small{
+    font-size: $font-10;
+    font-weight: $font-bold-regular;
+    line-height: 0.875rem;
+}
+
+@mixin body_regular{
+    font-size: $font-14;
+    font-weight: $font-regular;
+    line-height: 1.25rem;
+}
+
