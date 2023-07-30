@@ -1,0 +1,17 @@
+.divider {
+    margin: 0;
+    opacity: 1;
+    border-radius: .0625rem;
+}
+
+.divider_white{
+    color:$white;
+}
+
+.divider_light{
+    color: $gray-400;
+}
+
+.divider_dark{
+    color: $gray-600;
+}
