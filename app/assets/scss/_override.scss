@@ -1,0 +1,320 @@
+@import 'colors';
+
+// override bootstrap scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import '~bootstrap/scss/functions';
+
+// 2. Include any default variable overrides here
+//override bootstrap grid breakpoint
+$grid-breakpoints: (
+  xs: 0,
+  sm: 640px,
+  md: 768px,
+  lg: 960px,
+  xl: 1280px,
+  xxl: 1920px
+);
+
+$container-max-widths: (
+  sm: 624px,
+  md: 720px,
+  lg: 928px,
+  xl: 1232px,
+  xxl: 1792px
+);
+
+$grid-gutter-width: 3rem;
+$gutters: (
+  0: 0,
+  1: 1rem,
+  2: 2rem,
+  3: 3rem,
+  4: 4rem,
+  5: 5rem,
+);
+
+$blue: $blue-500;
+$purple: $purple-500;
+$red: $red-500;
+$yellow: $yellow-500;
+$green: $green-500;
+$teal: $teal-500;
+
+$primary: $blue !default;
+$success: $green !default;
+$warning: $yellow !default;
+$danger: $red !default;
+
+$secondary: $gray-700;
+$success: $green-700;
+
+// component default font-size
+$font-size-sm: .75rem;
+$btn-font-size: .875rem;
+$input-btn-font-size: .875rem;
+$dropdown-font-size: .875rem;
+
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+
+:root {
+  --#{$variable-prefix}body-font-size: .875rem;
+}
+
+@import '~bootstrap/scss/utilities';
+
+$all-colors: map-merge-multiple($blues, $reds, $yellows, $greens, $teals, $purples, $grays);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    // 'shadow': null,
+    // 'border': null,
+    // 'border-top': null,
+    // 'border-bottom': null,
+    // 'border-end': null,
+    // 'border-start': null,
+    // 'border-color': null,
+    // 'margin': null,
+    // 'margin-x': null,
+    // 'margin-y': null,
+    // 'margin-top': null,
+    // 'margin-end': null,
+    // 'margin-bottom': null,
+    // 'margin-start': null,
+    // 'negative-margin': null,
+    // 'negative-margin-x': null,
+    // 'negative-margin-y': null,
+    // 'negative-margin-top': null,
+    // 'negative-margin-end': null,
+    // 'negative-margin-bottom': null,
+    // 'negative-margin-start': null,
+    // 'padding': null,
+    // 'padding-x': null,
+    // 'padding-y': null,
+    // 'padding-top': null,
+    // 'padding-end': null,
+    // 'padding-bottom': null,
+    // 'padding-start': null,
+    'font-family': null,
+    'font-size': null,
+    // 'font-weight': null,
+    // 'line-height': null,
+    // 'rounded': null,
+    // 'rounded-top': null,
+    // 'rounded-bottom': null,
+    // 'rounded-end': null,
+    // 'rounded-start': null,
+    "h-color":
+    ( 
+      property: color,
+      class: text,
+      local-vars: null,
+      values: $all-colors,
+    ),
+    "h-background-color":
+    ( 
+      property: background-color,
+      class: bg,
+      local-vars: null,
+      values: $all-colors,
+    ),
+  )
+);
+
+// 4. Include any optional Bootstrap CSS as needed
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/containers';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/tables';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/transitions';
+@import '~bootstrap/scss/dropdown';
+@import '~bootstrap/scss/button-group';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/navbar';
+@import '~bootstrap/scss/card';
+@import '~bootstrap/scss/accordion';
+@import '~bootstrap/scss/breadcrumb';
+@import '~bootstrap/scss/pagination';
+@import '~bootstrap/scss/badge';
+@import '~bootstrap/scss/alert';
+@import '~bootstrap/scss/progress';
+@import '~bootstrap/scss/list-group';
+@import '~bootstrap/scss/close';
+@import '~bootstrap/scss/toasts';
+@import '~bootstrap/scss/modal';
+@import '~bootstrap/scss/tooltip';
+@import '~bootstrap/scss/popover';
+@import '~bootstrap/scss/carousel';
+@import '~bootstrap/scss/spinners';
+@import '~bootstrap/scss/offcanvas';
+@import '~bootstrap/scss/placeholders';
+@import '~bootstrap/scss/helpers';
+
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import '~bootstrap/scss/utilities/api';
+
+// 6. Add additional custom code here
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:not([href]):not([class]) {
+  text-decoration: none;
+}
+
+a:not([href]):not([class]):hover {
+  text-decoration: none;
+}
+
+//btn-link style, remove the underline style
+.btn-link {
+  text-decoration: none;
+  &:focus {
+    text-decoration: none;
+    box-shadow: none;
+  }
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+// .bs-popover-top {
+//   > .popover-arrow {
+//     bottom: -0.44194rem !important;
+//     height: 0px;
+//     width: 0px;
+//     left: 0;
+//     right: 0;
+//     margin: auto;
+
+//     border-color: #ffffff transparent transparent transparent;
+//     border-style: solid solid solid solid;
+//     border-width: $popover-arrow-width $popover-arrow-width 0px 0px;
+//     transform: rotate(-135deg) !important;
+//     box-shadow: -0.125rem -0.125rem 0.125rem #07070726;
+//     &::before {
+//       display: none;
+//     }
+//     &::after {
+//       display: none;
+//     }
+//   }
+// }
+
+// .bs-popover-end {
+//   > .popover-arrow {
+//     left: -0.44194rem;
+//     height: 0px;
+//     width: 0px;
+//     top: 0;
+//     bottom: 0;
+//     margin: auto;
+
+//     border-color: #ffffff transparent transparent transparent;
+//     border-style: solid solid solid solid;
+//     border-width: $popover-arrow-width $popover-arrow-width 0px 0px;
+//     transform: rotate(-45deg) !important;
+//     box-shadow: -0.125rem -0.125rem 0.125rem #07070726;
+//     &::before {
+//       display: none;
+//     }
+//     &::after {
+//       display: none;
+//     }
+//   }
+// }
+
+// .bs-popover-bottom {
+//   > .popover-arrow {
+//     top: -0.44194rem;
+//     height: 0px;
+//     width: 0px;
+//     left: 0;
+//     right: 0;
+//     margin: auto;
+
+//     border-color: #ffffff transparent transparent transparent;
+//     border-style: solid solid solid solid;
+//     border-width: $popover-arrow-width $popover-arrow-width 0px 0px;
+//     transform: rotate(45deg) !important;
+//     box-shadow: -0.125rem -0.125rem 0.125rem #07070726;
+//     &::before {
+//       display: none;
+//     }
+//     &::after {
+//       display: none;
+//     }
+//   }
+// }
+
+// .bs-popover-start {
+//   > .popover-arrow {
+//     right: -0.44194rem;
+//     height: 0px;
+//     width: 0px;
+//     top: 0;
+//     bottom: 0;
+//     margin: auto;
+
+//     border-color: #ffffff transparent transparent transparent;
+//     border-style: solid solid solid solid;
+//     border-width: $popover-arrow-width $popover-arrow-width 0px 0px;
+//     transform: rotate(135deg) !important;
+//     box-shadow: -0.125rem -0.125rem 0.125rem #07070726;
+//     &::before {
+//       display: none;
+//     }
+//     &::after {
+//       display: none;
+//     }
+//   }
+// }
+
+.modal-open {
+  padding-right: 0px !important;
+}
+
+// Force rc-dropdown to use font-family from body
+.rc-dropdown {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem !important;
+  height: 0.5rem !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.625rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gray-500;
+}
+
+svg:not(:root).svg-inline--fa,
+svg:not(:host).svg-inline--fa {
+  box-sizing: border-box !important;
+  overflow: hidden;
+}
+
+// Badge style
+.badge.hireez-badge{
+  font-size: 58%;
+  border-radius:  16px;
+}
