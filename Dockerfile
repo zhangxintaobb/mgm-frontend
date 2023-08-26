@@ -4,7 +4,10 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm install --save
+
+#TODO:need improvement
+RUN npm i bootstrap@5.1.3 --save
 
 COPY . .
 
