@@ -138,6 +138,12 @@
                 "no-shadow":"off",
                 "@typescript-eslint/no-shadow":["error"]
             }
+        },
+        {
+            "files":["**/*.ts","**/*.tsx"],
+            "rules": {
+                "import/no-extraneous-dependencies":["off"]
+            }
         }
     ],
     "globals": {
