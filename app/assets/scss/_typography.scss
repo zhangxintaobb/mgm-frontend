@@ -1,0 +1,17 @@
+h1,
+.page_heading{
+    @include page_heading;
+    color: $gray-900
+}
+
+h2,
+.page_heading{
+    @include section_heading;
+    color: $gray-900
+}
+
+h3,
+.sub_heading{
+    @include label_regular;
+    color: $gray-800;
+}

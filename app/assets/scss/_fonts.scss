@@ -12,6 +12,24 @@ $font-bold-light: 600;
 $font-bold-regular: 700;
 $font-bold-medium: 800;
 
+@mixin page_heading{
+    font-size:$font-24;
+    font-weight: $font-bold-regular;
+    line-height: 2rem;
+}
+
+@mixin section_heading{
+    font-size:$font-20;
+    font-weight: $font-bold-regular;
+    line-height: 2rem;
+}
+
+@mixin sub_heading{
+    font-size:$font-16;
+    font-weight: $font-bold-regular;
+    line-height: 1.375rem;
+}
+
 @mixin caption_medium{
     font-size: $font-12;
     font-weight: $font-medium;
