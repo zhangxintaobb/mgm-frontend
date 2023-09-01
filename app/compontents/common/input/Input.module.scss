@@ -1,0 +1,140 @@
+@import '../../../assets/scss/fonts';
+@import '../../../assets/scss/colors';
+
+.outline {
+  border: 0.0625rem solid;
+  border-radius: 0.5rem;
+}
+
+.underline {
+  border-bottom: 0.0625rem solid;
+}
+
+.input__container {
+  border-color: $gray-600;
+  display: flex;
+  background-color: $white;
+  &:focus-within {
+    border-color: $blue-500;
+  }
+  &.error {
+    border-color: $red-500;
+  }
+  &.disabled {
+    border-color: $gray-700;
+    background-color: $gray-400;
+  }
+}
+
+.input {
+  @include body_regular;
+  line-height: 1;
+  border: none;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: .5rem 1rem .5rem 1rem;
+  background: inherit;
+  border-radius: 0.5rem;
+  &:disabled {
+    background-color: $gray-400;
+  }
+  &:-webkit-autofill{
+    background-color: transparent !important;
+  }
+}
+
+.input__close {
+  color: $gray-800;
+  width: 1rem !important;
+}
+
+.input-multi {
+  @include body_regular;
+  padding: .5rem 1rem .5rem 1rem;
+  border-radius: 0.5rem;
+  line-height: 1;
+  border: none;
+  outline: none;
+}
+
+.has-value {
+  padding: .1875rem 0.5rem .1875rem 0.75rem;
+}
+
+.input-multi__values {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.input-multi__close-btn {
+  height: fit-content;
+  margin: auto 0;
+}
+
+.textarea__container {
+  @include body_regular;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+}
+
+.textarea__label,
+.input__label {
+  margin-bottom: 0.5rem;
+  @include label_regular;
+}
+
+.textarea {
+  @include body_regular;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid $gray-600;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  &:focus,
+  &:active {
+    border-color: $blue-500;
+  }
+  &.error {
+    border-color: $red-500;
+  }
+  &::-webkit-scrollbar-track{
+    margin-top: .5rem;
+  }
+}
+
+.textarea__helper,
+.input__helper {
+  @include caption_medium;
+  margin-top: 0.5rem;
+  display: inline-block;
+  margin-right: 2rem;
+  & svg {
+    margin-right: 0.5rem;
+  }
+  &.info,
+  &:disabled {
+    color: $gray-700;
+  }
+  &.error {
+    color: $red-500;
+  }
+}
+
+.input__word-count {
+  @include caption_medium;
+  margin-top: 0.5rem;
+  display: inline-block;
+  text-align: right;
+  margin-left: auto;
+  
+  &.info {
+    color: $gray-700;
+  }
+  &.error {
+    color: $red-500; 
+  }
+}
