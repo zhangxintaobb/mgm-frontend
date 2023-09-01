@@ -30,3 +30,8 @@ $font-bold-medium: 800;
     line-height: 1.25rem;
 }
 
+@mixin label_regular{
+    font-size: $font-14;
+    font-weight: $font-medium;
+    line-height: 1.25rem;
+}
