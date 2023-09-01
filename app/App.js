@@ -13,7 +13,7 @@ const MainRouteSwitch = withRouter(props => {
   console.log("props", props);
   const defaultPage = "login";
   return (
-    <div>
+    <div style={{ height: "100vh" }}>
       <Switch>
         <Route path="/login" component={Login} />
         <Redirect to={defaultPage} />
